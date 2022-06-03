@@ -21,9 +21,7 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializer;
 
 /**
- *
  * @author jjs
- *
  */
 public class GsonUtils {
 

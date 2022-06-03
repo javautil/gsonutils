@@ -79,9 +79,13 @@ target
 #eclipse
 .recommenders
 .metadata
+.settings
+.classpath 
 
 #javadoc
 doc
 
 .idea
 bin/
+
+test-output
