@@ -85,11 +85,3 @@ doc
 
 .idea
 bin/
-
-test-output
-
-# eclipse
-#
-.classpath
-.settings
-

@@ -13,7 +13,7 @@ fi
 #git init
 cp ~/templates/.gitignore .gitignore
 git config --global user.email "javautil.org@gmail.com"
-git remote add origin ssh://git@github.com/techwanker/$project
+git remote add origin ssh://git@github.com/javautil/$project
 git remote set-url origin ssh://git@github.com/javautil/$project
 git config --get remote.origin.url
 git remote -v
