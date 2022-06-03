@@ -1,0 +1,116 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.javautil</groupId>
+	<artifactId>gsonutils</artifactId>
+	<version>1.0.3-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<!-- <parent></parent> -->
+	<!-- <modules></modules> -->
+
+	<properties>
+		<java.version>17</java.version>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+     	<log4j.version>2.17.2</log4j.version>
+		<org.apache.logging.version>2.17.2</org.apache.logging.version>
+     	<gson.version>2.9.0</gson.version>
+     	<org.snakeyaml.version>1.30</org.snakeyaml.version>
+     		<org.slf4j.version>2.0.0-alpha6</org.slf4j.version>
+	</properties>
+	<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+	<dependencies>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>${gson.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.yaml/snakeyaml -->
+		<dependency>
+			<groupId>org.yaml</groupId>
+			<artifactId>snakeyaml</artifactId>
+			<version>1.30</version>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.4.0</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- logging -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>${org.apache.logging.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${org.apache.logging.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<version>${org.apache.logging.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${org.slf4j.version}</version>
+		</dependency>
+
+	</dependencies>
+	
+	
+	<!-- <reporting></reporting> -->
+	<name>gsonutils</name>
+	<description>Registered marshalling for Gson</description>
+	<url>https://github.com/javautil/gsonutil</url>
+	<inceptionYear>2022</inceptionYear>
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>https://opensource.org/licenses/mit-license.php</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<!-- <organization></organization> -->
+	<developers>
+		<developer>
+			<name>javautil.org</name>
+			<email>info@javautil.org</email>
+			<url>javautil.org/</url>
+		</developer>
+	</developers>
+	<!-- <contributors></contributors> -->
+
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/javautil/gsonutils/issues</url>
+	</issueManagement>
+	<ciManagement>
+		<system>Travis</system>
+		<url>https://travis-ci.org/your-name/your-project-name/</url>
+	</ciManagement>
+	<!-- <mailingLists></mailingLists> -->
+	<scm>
+		<connection>scm:git:git://github.com/javautil/gsonutils.git</connection>
+		<developerConnection>scm:git:git@github.com:javautl/gsonutilsgit</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/javautil/gsonutils</url>
+	</scm>
+
+	<!-- <prerequisites></prerequisites> -->
+
+	<!-- <repositories></repositories> -->
+
+	<!-- <pluginRepositories></pluginRepositories> -->
+
+	<!-- <distributionManagement></distributionManagement> -->
+
+	<!-- <profiles></profiles> -->
+
+</project>
