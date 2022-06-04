@@ -3,16 +3,21 @@
 
 	<Properties>
 		<Property name="consoleOutputPattern">%highlight{%d{HH:mm:ss} [%t] %-5level (%logger{36}): %msg%n}</Property>
-		<Property name="fileOutputPattern">%d{DEFAULT} [%t] %-5level (%logger{36}): %msg%n
-		</Property>
+		<Property name="fileOutputPattern">%d{DEFAULT} [%t] %-5level (%logger{36}): %msg%n</Property>
+		<Property name="stdoutPattern">%msg%n</Property>
 	</Properties>
 	<!-- <Filter /> -->
 
 	<Appenders>
 
+	     <Console name="Console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${consoleOutputPattern}"/>
+        </Console>
+        
+
 		<Console name="stdout" target="SYSTEM_OUT">
-			<PatternLayout pattern="${consoleOutputPattern}" />
-			<ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+			<PatternLayout pattern="${stdoutPattern}" />
+			<ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
 		</Console>
 
 		<RollingFile name="rollingFile" fileName="logs/app.log"
@@ -27,8 +32,13 @@
 		</RollingFile>
 
 	</Appenders>
-
+	
+    
 	<Loggers>
+    <Logger name="org.testng.internal" additivity="false" level="warn">
+            <AppenderRef ref="Console"  />
+    </Logger>
+    
 		<Root level="trace">
 			<AppenderRef ref="stdout" />
 			<AppenderRef ref="rollingFile" />
